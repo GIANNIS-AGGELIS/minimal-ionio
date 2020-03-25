@@ -5,7 +5,7 @@
     {% for book_in_databace in site.data.books %}
     
         {if target_book == book_in_databace}
-            {{book_in_databace}}
+            {{book_in_databace.name}}
         {endif}
 
     {% endfor %}
