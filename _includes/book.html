@@ -1,6 +1,12 @@
 <h2>The books test</h2>
 
 {% for book in page.books %}
-    {{book.name}}
+    {% assign target_book = book %}
+    {% for book_in_databace in site.data.books %}
+    
+        {if target_book == book_in_databace}
+            {{book_in_databace}}
+        {endif}
 
+    {% endfor %}
 {% endfor %}
