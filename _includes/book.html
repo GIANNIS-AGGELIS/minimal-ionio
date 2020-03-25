@@ -3,7 +3,7 @@
 {% for book in page.books %}
     {% assign target_book = book %}
     {% for book_in_databace in site.data.books %}
-        {{book_in_databace}}
+        {{book_in_databace.name}}
         {% if target_book == book_in_databace %}
             {{book_in_databace}}
         {% endif %}
