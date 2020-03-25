@@ -1,5 +1,8 @@
 <h2>The books test</h2>
 
 {% for book in page.books %}
-    {{book}}
+    {{book.name}}
+    <!-- {% if book in site.data.books %}
+        {{book.name}}
+    {% endif%} -->
 {% endfor %}
