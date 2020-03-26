@@ -5,12 +5,10 @@
 
     {% for book_in_databace in site.data.books %}
 
-    {% comment %}
 
         {{ book_in_databace }}
 
-    {% endcomment %}
-    
+
         {% if target_book contains book_in_databace %}
 
             {{ book_in_databace.ISBN }}
