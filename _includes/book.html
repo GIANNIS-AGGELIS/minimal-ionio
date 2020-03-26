@@ -7,10 +7,10 @@
     
     
     {% for book_in_databace in site.data.books %}
-
+    {% assign book_in_db = book_in_databace[book] %}
         
 
-        <p> BOOK name in data base: {{ book_in_databace }}</p>
+        <p> BOOK name in data base: {{ book_in_db.name }}</p>
 
         {% comment %}
             {% if target_book == book_in_databace.code %}
