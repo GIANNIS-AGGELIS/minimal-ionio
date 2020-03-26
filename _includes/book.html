@@ -1,16 +1,16 @@
 <h2>The books test</h2>
 
 {% for book in page.books %}
-    {% assign target_book = book %}
 
-    <p> Book in course : {{ target_book }} </p>
+
+    <p> Book in course : {{ book }} </p>
     
     
     {% for book_in_databace in site.data.books %}
 
-        {% assign book_in_db = book_in_databace %}
+        
 
-        <p> BOOK name in data base: {{ book_in_db }}</p>
+        <p> BOOK name in data base: {{ book_in_databace }}</p>
 
         {% comment %}
             {% if target_book == book_in_databace.code %}
