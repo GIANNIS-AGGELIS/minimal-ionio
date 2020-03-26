@@ -2,18 +2,22 @@
 
 {% for book in page.books %}
     {% assign target_book = book %}
-     <p> Book in course : {{ target_book }} </p>
-    {% for book_in_databace in site.data.books %}
+
+    <p> Book in course : {{ target_book }} </p>
+    
+    {% comment %}
+        {% for book_in_databace in site.data.books %}
 
 
-    <p>BOOK name: {{book_in_databace.name}}</p>
+        <p>BOOK name: {{book_in_databace.name}}</p>
 
 
-        {% if target_book == book_in_databace.code %}
+            {% if target_book == book_in_databace.code %}
 
-            {{ book_in_databace.ISBN }}
+                {{ book_in_databace.ISBN }}
 
-        {% endif %}
+            {% endif %}
 
-    {% endfor %}
+        {% endfor %}
+    {% endcomment %}
 {% endfor %}
