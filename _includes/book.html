@@ -6,10 +6,10 @@
     {% for book_in_databace in site.data.books %}
 
 
-        {{ book_in_databace["name"] }}
+    <p>BOOK name: {{book_in_databace.}}</p>
 
 
-        {% if target_book contains book_in_databace %}
+        {% if target_book == book_in_databace.code %}
 
             {{ book_in_databace.ISBN }}
 
