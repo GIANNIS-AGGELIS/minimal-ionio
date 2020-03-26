@@ -6,8 +6,8 @@
     <p> Book in course : {{ book }} </p>
     
     
-    {% for book_in_databace in site.data.books %}
-    {% assign book_in_db = book_in_databace[book] %}
+    
+    {% assign book_in_db = site.data.books[book] %}
         
 
         <p> BOOK name in data base: {{ book_in_db.name }}</p>
@@ -19,6 +19,6 @@
 
             {% endif %}
         {% endcomment %}
-    {% endfor %}
+    
        
 {% endfor %}
