@@ -6,11 +6,11 @@
     <p> Book in course : {{ target_book }} </p>
     
     
-    {% for book_in_databace in site.data.books%}
+    {% for book_in_databace in site.data.books.code%}
 
         {% assign book_in_db = book_in_databace %}
 
-        <p> BOOK name in data base: {{ book_in_db.name }}</p>
+        <p> BOOK name in data base: {{ book_in_db}}</p>
 
         {% comment %}
             {% if target_book == book_in_databace.code %}
