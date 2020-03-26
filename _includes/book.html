@@ -5,19 +5,20 @@
 
     <p> Book in course : {{ target_book }} </p>
     
-    {% comment %}
-        {% for book_in_databace in site.data.books %}
+    
+    {% for book_in_databace in site.data.books%}
 
+        {% assign book_in_db = book_in_databace %}
 
-        <p>BOOK name: {{book_in_databace.name}}</p>
+        <p>BOOK name in data base: {{ book_in_db.name }}</p>
 
-
+        {% comment %}
             {% if target_book == book_in_databace.code %}
 
                 {{ book_in_databace.ISBN }}
 
             {% endif %}
-
-        {% endfor %}
-    {% endcomment %}
+        {% endcomment %}
+    {% endfor %}
+       
 {% endfor %}
