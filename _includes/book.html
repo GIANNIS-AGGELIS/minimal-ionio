@@ -4,6 +4,6 @@
 
         {% assign book_in_db = site.data.books[book] %}
         <ul>
-            </li> BOOK name in data base: {{ book_in_db.name }} </li>
+            </li> <p>{{ book_in_db.name }} , {{book_in_db.authors}} </p> </li>
         </ul>
     {% endfor %}
