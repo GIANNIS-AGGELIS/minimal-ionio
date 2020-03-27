@@ -1,5 +1,5 @@
 <h2> Βιβλιογραφία: </h2>
-<ol>
+<ul>
     {% for book in page.books %}
 
         {% assign book_in_db = site.data.books[book] %}
@@ -7,4 +7,4 @@
     </li> BOOK name in data base: {{ book_in_db.name }} </li>
 
     {% endfor %}
-</ol>
+<ul>
