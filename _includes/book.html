@@ -1,9 +1,10 @@
-<h2>The books test</h2>
+<h2> Βιβλιογραφία: </h2>
+<ol>
+    {% for book in page.books %}
 
-{% for book in page.books %}
+        {% assign book_in_db = site.data.books[book] %}
 
-    {% assign book_in_db = site.data.books[book] %}
+    </li> BOOK name in data base: {{ book_in_db.name }} </li>
 
-    <p> BOOK name in data base: {{ book_in_db.name }}</p>
-
-{% endfor %}
+    {% endfor %}
+</ol>
