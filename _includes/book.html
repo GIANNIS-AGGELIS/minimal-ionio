@@ -4,6 +4,12 @@
 
         {% assign book_in_db = site.data.books[book] %}
         <ul>
-            </li> <p>{{ book_in_db.name }} , {{book_in_db.authors}}  </p> </li>
+            </li> 
+                <p>     
+                    {{ book_in_db.name }} , {{book_in_db.authors}} , 
+                    Εκδοσεις {{book_in_db.publisher}} , {{book_in_db.version}} ,
+                    ISBN : {{book_in_db.ISBN}} 
+                </p>
+            </li>
         </ul>
     {% endfor %}
