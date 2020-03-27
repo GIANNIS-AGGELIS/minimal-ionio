@@ -5,11 +5,13 @@
         {% assign book_in_db = site.data.books[book] %}
         <ul>
             </li> 
-                <p>     
-                    {{ book_in_db.name }} , {{book_in_db.authors}} , 
-                    Εκδοσεις {{book_in_db.publisher}} , {{book_in_db.version}} ,
-                    ISBN : {{book_in_db.ISBN}} 
-                </p>
+                <a href= "{{ book_in_db.url }}" >
+                    <p>
+                        {{ book_in_db.name }} , {{book_in_db.authors}} , 
+                        Εκδόσεις {{book_in_db.publisher}} , {{book_in_db.version}} / {{book_in_db.year}} ,
+                        ISBN : {{book_in_db.ISBN}} 
+                    </p>
+                </a>
             </li>
         </ul>
     {% endfor %}
